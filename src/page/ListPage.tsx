@@ -24,7 +24,7 @@ const ListPage: React.FC = () => {
 
     return (
         <div>
-        <h1>Iris Data</h1>
+        <h1>Item Data</h1>
        <FilterFormComponent
         nameFilter={nameFilter}
         emailFilter={emailFilter}

@@ -69,7 +69,7 @@ const SearchPage: React.FC = () => {
                onChange={e => setFormValues({ ...formValues, email: e.target.value })}
                 placeholder="email"
             />
-            <button type="submit">Update Iris</button>
+            <button type="submit">Update Item</button>
           </form>
           {/* ✅ Remove Button */}
           <button
