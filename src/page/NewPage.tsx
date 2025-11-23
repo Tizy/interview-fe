@@ -12,6 +12,7 @@ const NewPage: React.FC = () => {
     const [createdItem, setCreatedItem] = useState<Item | null>(null);
 
     const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault(); 
         throw new Error("Function not implemented.");
     }
 
@@ -29,7 +30,7 @@ const NewPage: React.FC = () => {
             type="text"
             step="any"
             value={formValues.name}
-            onChange={e => handleChange("name", e.target.value)}
+            onChange={e => setFormValues({ ...formValues, name: e.target.value })}
           />
         </label>
         <label>
@@ -38,7 +39,7 @@ const NewPage: React.FC = () => {
             type="text"
             step="any"
             value={formValues.email}
-            onChange={e => handleChange("email", e.target.value)}
+             onChange={e => setFormValues({ ...formValues, email: e.target.value })}
           />
         </label>
         <button type="submit">Create New Item</button>

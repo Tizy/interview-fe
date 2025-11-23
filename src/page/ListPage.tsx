@@ -18,22 +18,22 @@ const ListPage: React.FC = () => {
         throw new Error("Function not implemented.");
     }
 
-    function clearFilters(): void {
+    const clearFilters = () => {
         throw new Error("Function not implemented.");
     }
 
     return (
         <div>
-        <h1>Item Data</h1>
-       <FilterFormComponent
-        nameFilter={nameFilter}
-        emailFilter={emailFilter}
-        setEmailFilter={setEmailFilter}
-        setNameFilter={setNameFilter}
-        onApply={applyFilters}
-        onClear={clearFilters}   
-        />
-        <Table items={items} />
+            <h1>Item Data</h1>
+            <FilterFormComponent
+                nameFilter={nameFilter}
+                emailFilter={emailFilter}
+                setEmailFilter={setEmailFilter}
+                setNameFilter={setNameFilter}
+                onApply={applyFilters}
+                onClear={clearFilters}   
+            />
+            <Table items={items} />
         </div>
     );
 };
