@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+/* CUSTOME CSS */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.data-table {
+  max-height: 300px;
+  overflow-y: auto;             
+  border: 1px solid #ddd;        
+  font-family: monospace;        
+}
+
+.data-table-header {
+  display: grid;               
+  grid-template-columns: 400px 400px 400px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.data-table-row {
+  display: grid;            
+  grid-template-columns: 400px 400px 400px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-form {
+  display: grid;
+  grid-template-columns: repeat(3, 400px); /* same width as table */
+  gap: 12px;           
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 24px;    /* ✅ space between form and table */
+}
+
+.filter-form input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.filter-form button {
+  padding: 6px 12px;
+}
+

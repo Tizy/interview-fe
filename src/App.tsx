@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css';
+import ListPage from './page/ListPage';
+import SearchPage from './page/SearchPage';
+import NewPage from './page/NewPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav style={{ marginBottom: "20px" }}>
+        <Link to="/list" style={{ marginRight: "12px" }}>List</Link>
+        <Link to="/search" style={{ marginRight: "12px" }}>Update/Delete</Link>
+        <Link to="/new">Insert New</Link>
+      </nav>
+      <Routes>
+        <Route path="/list" element={<ListPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/new" element={<NewPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
